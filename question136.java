@@ -1,3 +1,4 @@
+//HashSet solution without using XOR operator
 class Solution {
     public int singleNumber(int[] nums) {
         HashSet<Integer> set=new HashSet<>();
