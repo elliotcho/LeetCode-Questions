@@ -8,14 +8,17 @@
  * }
  */
 class Solution {
-    ArrayList<Integer> res=new ArrayList<>();
-    public List<Integer> inorderTraversal(TreeNode root) {
-        if(root==null){return res;}
-        
-        if(root.left!=null){inorderTraversal(root.left);}
-        res.add(root.val);
-        if(root.right!=null){inorderTraversal(root.right);}
-        
+    public List<Integer> inorderTraversal(TreeNode root){
+        ArrayList<Integer> res=new ArrayList<>();
+        helper(root, res);
         return res;
+    }
+    
+    public void helper(TreeNode root, List<Integer> res) {
+        if(root==null){return;}
+        
+        if(root.left!=null){helper(root.left, res);}
+        res.add(root.val);
+        if(root.right!=null){helper(root.right, res);}
     }
 }
