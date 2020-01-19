@@ -14,7 +14,6 @@ class Solution {
                 pairs.add(nums[j]);
             }
             
-            
             allNums.add(nums[j]);
         }
         
