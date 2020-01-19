@@ -13,7 +13,7 @@ class Solution {
       }
       
       PriorityQueue<Map.Entry<Integer, Integer>> heap=
-            new PriorityQueue<>((o1, o2) -> o2.getValue()-o1.getValue());
+            new PriorityQueue<>((entry1, entry2) -> entry2.getValue()-entry1.getValue());
       heap.addAll(map.entrySet());
       
       ArrayList<Integer> res=new ArrayList<>();
