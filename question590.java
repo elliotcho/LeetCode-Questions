@@ -22,10 +22,11 @@ class Solution {
         Stack<Node> stack=new Stack<>();
         
         if(root==null){return res;}
-        stack.push(root);
         
+        stack.push(root);
         while(!stack.isEmpty()){
             Node current=stack.pop();
+            
             res.addFirst(current.val);
             
             for(Node child: current.children){
