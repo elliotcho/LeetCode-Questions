@@ -26,6 +26,7 @@ class Solution {
         stack.add(root);
         while(!stack.isEmpty()){
             Node current=stack.pop();
+            
             res.add(current.val);
             
             for(int i=current.children.size()-1;i>=0;i--){
