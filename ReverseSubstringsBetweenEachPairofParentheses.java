@@ -21,8 +21,7 @@ class Solution {
                   
             else{
                 res.append(s.charAt(i));
-            }
-            
+            } 
         }
      
         return res.toString();
