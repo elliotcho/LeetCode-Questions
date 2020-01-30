@@ -10,7 +10,6 @@ class Solution {
             if(S.charAt(i)!='#'){sTop++; sStack[sTop]=S.charAt(i);}
        }
         
-        
        for(int j=0;j<T.length();j++){
             if(tTop!=-1 && T.charAt(j)=='#'){
                 tTop--;
@@ -19,7 +18,6 @@ class Solution {
             if(T.charAt(j)!='#'){tTop++; tStack[tTop]=T.charAt(j);}
         }
         
-    
        String sString=String.valueOf(sStack).substring(0, sTop+1);
        String tString=String.valueOf(tStack).substring(0, tTop+1);
         
