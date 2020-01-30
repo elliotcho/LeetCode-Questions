@@ -16,12 +16,9 @@ class Solution {
             for(int j=0; j<arr.length;j++){
                 if(arr[j]==0){arr[j]=1;}
                 else{arr[j]=0;}
-            }
-            
-            
-            
+            }    
         }    
+        
         return A;
-    
     }
 }
