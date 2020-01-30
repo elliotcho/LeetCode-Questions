@@ -7,9 +7,7 @@ class Solution {
                 A[mark]=A[i];
                 A[i]=temp;
                 mark++;
-            }
-            
-            
+            }  
         }
         
         return A;
