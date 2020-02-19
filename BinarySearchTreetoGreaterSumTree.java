@@ -26,5 +26,7 @@ class Solution {
         root.val=total[0];
         
         if(root.left!=null){reverseInorder(root.left, total);}
+        
+        return;
     }
 }
