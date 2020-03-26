@@ -22,14 +22,14 @@ class Solution {
         while(rowQueue.size()!=0 && colQueue.size()!=0){
             int currRow=rowQueue.remove();
             int currCol=colQueue.remove();
-            int currPos=matrix[currRow][currCol];
+            int currVal=matrix[currRow][currCol];
             
             for(int i=0;i<4;i++){
                 int row=currRow+rowDirections[i];
                 int col=currCol+colDirections[i];
                 
-                if(row>=0 && row<matrix.length && col>=0 && col<matrix[0].length && matrix[row][col]>currPos+1){
-                    matrix[row][col]=currPos+1;
+                if(row>=0 && row<matrix.length && col>=0 && col<matrix[0].length && matrix[row][col]>currVal+1){
+                    matrix[row][col]=currVal+1;
                     rowQueue.add(row);
                     colQueue.add(col);
                 }
