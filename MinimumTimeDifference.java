@@ -25,15 +25,13 @@ class Solution {
                 }
                 
                 else{
-                    int temp=Math.min(res, i-prev_time);
-                    res=Math.min(temp, 1440-i+prev_time);
+                    res=Math.min(res, i-prev_time);
                     prev_time=i;
                 }
             }
         }
         
-        int temp=Math.min(res, prev_time-first_time);
-        res=Math.min(temp, 1440-prev_time+first_time);
+        res=Math.min(res, 1440-prev_time+first_time);
         
         return res;
     }
