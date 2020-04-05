@@ -24,6 +24,7 @@ class Solution {
                 char[] charArr=curr_state.toCharArray(); 
                 
                 for(int j=0;j<4;j++){
+                    //character originally at slot j
                     char pos=charArr[j];
                     
                     //increase pos by 1, if pos is 9 it will be changed to 0
