@@ -26,6 +26,7 @@ class Solution {
                 for(int j=0;j<4;j++){
                     char pos=charArr[j];
                     
+                    //increase pos by 1, if pos is 9 it will be changed to 0
                     charArr[j]=(char)(((pos-'0'+1)%10)+'0');
                     String s1=String.valueOf(charArr);
                     
@@ -34,6 +35,7 @@ class Solution {
                         queue.add(s1);
                     }
                     
+                    //decrease pos by 1, if pos is 0 it will be changed to 9
                     charArr[j]=(char)(((pos-'0'+9)%10)+'0');
                     String s2=String.valueOf(charArr);
                     
