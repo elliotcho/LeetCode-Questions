@@ -29,6 +29,7 @@ class Solution {
                     
                     //increase pos by 1, if pos is 9 it will be changed to 0
                     charArr[j]=(char)(((pos-'0'+1)%10)+'0');
+                    
                     String s1=String.valueOf(charArr);
                     
                     if(!locked.contains(s1) && !visited.contains(s1)){
@@ -38,6 +39,7 @@ class Solution {
                     
                     //decrease pos by 1, if pos is 0 it will be changed to 9
                     charArr[j]=(char)(((pos-'0'+9)%10)+'0');
+                    
                     String s2=String.valueOf(charArr);
                     
                     if(!locked.contains(s2) && !visited.contains(s2)){
