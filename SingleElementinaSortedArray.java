@@ -7,22 +7,22 @@ class Solution {
             int mid=start+(end-start)/2;
             
             if(mid>0 && nums[mid]==nums[mid-1]){
-                if((mid-1)%2==0){
-                    start=mid+1;
+                if((mid-1)%2!=0){
+                    end=mid-1;
                 }
                 
                 else{
-                    end=mid-1;
+                    start=mid+1;
                 }
             }
             
             else if(mid<nums.length-1 && nums[mid]==nums[mid+1]){
-                if((mid+1)%2==0){
-                    end=mid-1;
+                if((mid+1)%2!=0){
+                    start=mid+1;
                 }
                 
                 else{
-                    start=mid+1;
+                    end=mid-1;
                 }
             }
             
