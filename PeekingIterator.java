@@ -20,11 +20,11 @@ class PeekingIterator implements Iterator<Integer> {
 	// Override them if needed.
 	@Override
 	public Integer next() {
-	    return queue.size()==0? null: queue.remove();
+		return queue.size()==0? null: queue.remove();
 	}
 	
 	@Override
 	public boolean hasNext() {
-	    return queue.size()>0;
+		return queue.size()>0;
 	}
 }
