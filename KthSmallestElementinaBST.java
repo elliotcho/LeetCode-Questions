@@ -4,23 +4,36 @@
  *     int val;
  *     TreeNode left;
  *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
-        ArrayList<Integer> nodes=new ArrayList<>();
-        nodes=inorder(root, nodes);
-        return nodes.get(k-1);
+        int[] res={0};
+        int[] count={0};
+        
+        inorder(root, res, k, count);
+        
+        return res[0];
     }
     
-    public ArrayList<Integer> inorder(TreeNode root, ArrayList<Integer> nodes){
-        if(root==null){return nodes;}
+    private void inorder(TreeNode root, int[] res ,int k, int[] count){
+        if(root==null || count[0]==k){return;}
         
-        if(root.left!=null){nodes=inorder(root.left, nodes);}
-        nodes.add(root.val);
-        if(root.right!=null){nodes=inorder(root.right, nodes);}
+        inorder(root.left, res, k, count);
         
-        return nodes;
+        count[0]++;
+        
+        if(count[0]==k){
+            res[0]=root.val;
+        }
+        
+        inorder(root.right, res, k, count);
     }
 }
