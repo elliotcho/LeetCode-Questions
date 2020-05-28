@@ -5,7 +5,6 @@
  *     public int get(int index) {}
  * }
  */
-
 class Solution {
     public int search(ArrayReader reader, int target) {
         int start=0, end=1;
