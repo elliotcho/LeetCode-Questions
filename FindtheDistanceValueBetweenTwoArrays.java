@@ -2,17 +2,29 @@ class Solution {
     public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {
         int res=0;
         
-        for(int i=0;i<arr1.length;i++){
-            boolean invalid=false;
+        TreeSet<Integer> set =new TreeSet<>();
+        
+        for(int i: arr2){set.add(i);}
+        
+        for(int i: arr1){
+            Integer closestHigh=set.ceiling(i);
+            Integer closestLow=set.floor(i);
             
-            for(int j=0;j<arr2.length;j++){
-                if(Math.abs(arr2[j]-arr1[i]) <= d){
-                    invalid=true;
-                    break;
-                }
+            int diff=0;
+            
+            if(closestHigh==null){
+                diff=i-closestLow;
             }
             
-            if(!invalid){res++;}
+            else if(closestLow==null){
+                diff=closestHigh-i;
+            }
+            
+            else{
+                diff=Math.min(i-closestLow, closestHigh-i);
+            }
+            
+            res= diff > d? res+1: res;
         }
         
         return res;
