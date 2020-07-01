@@ -1,6 +1,6 @@
 class Solution {
     public boolean validTree(int n, int[][] edges) {
-        int[] parent =new int[n];
+        int[] parent=new int[n];
         
         Arrays.fill(parent, -1);
         
